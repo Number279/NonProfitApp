@@ -1,6 +1,6 @@
 package com.tts.NonProfitApp.repository;
 
-
+import com.tts.NonProfitApp.model.Product;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
