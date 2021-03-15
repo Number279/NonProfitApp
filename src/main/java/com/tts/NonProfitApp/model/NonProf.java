@@ -1,5 +1,9 @@
 package com.tts.NonProfitApp.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.validator.constraints.Length;
 
@@ -11,6 +15,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 public class NonProf {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -40,6 +49,7 @@ public class NonProf {
     private String hours;
     private String needs;
     private String logo;
+    private String city;
 
     @CreationTimestamp
     private Date createdAt;
