@@ -13,6 +13,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 @Data
@@ -20,10 +21,10 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class NonProf {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "nonProf_id")
+    @Column(name = "user_id")
     private Long id;
 
     @Email(message = "Please proved a valid email")
@@ -33,7 +34,7 @@ public class NonProf {
     @Length(min = 3, message = "Your Non-Profit must have at least 3 characters")
     @Length(max = 15, message = "Your Non-Profit cannot have more than 15 characters")
     @NotEmpty(message = "Please provide a Non-Profit Name")
-    private String nonProfitName;
+    private String username;
 
     @NotEmpty(message = "Please provide a password with at least 5 characters.")
     @Length(min = 5, message = "Your password must have at least 5 characters")
@@ -41,10 +42,11 @@ public class NonProf {
 
     private int active;
 
-    @Length(min = 5, message = "Your zipcode must have 5 numbers")
-    @Length(max = 5, message = "Your zipcode cannot have more than 5 numbers")
+//    @Length(min = 5, message = "Your zipcode must have 5 numbers")
+//    @Length(max = 5, message = "Your zipcode cannot have more than 5 numbers")
     private int zipcode;
 
+    private String nonProfitName;
     private String address;
     private String hours;
     private String needs;
@@ -59,5 +61,5 @@ public class NonProf {
     private Set<Role> roles;
 
     @ElementCollection
-    private Map<Product> haves;
+    private Map<Product, Integer> haves;
 }

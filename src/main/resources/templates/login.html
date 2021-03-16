@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="fragments/fragments :: head"></head>
+<body>
+<!--<div th:replace="fragments/fragments :: navbar"></div>-->
+<main role="main">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Non Profit Demo</h1>
+            <p>Non-Profit Demo Test</p>
+            <!--            <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn more &raquo;</a></p>-->
+        </div>
+    </div>
+    <div class="container">
+        <h2>Welcome!</h2>
+        <form th:action="@{/login}" method="post"><br/>
+            <input type="text" id="username" name="username" th:placeholder="username" class="form-control"/> <br/>
+            <input type="password" th:placeholder="Password" id="password" name="password" class="form-control"/> <br/>
+            <div align="center" th:if="${param.error}">
+                <h4 style="color: red">Login unsuccessful.</h4>
+            </div>
+            <button class="btn btn-warning btn-lg twitter-btn" name="Submit" value="Login" type="Submit">Log in</button>
+        </form>
+        <form th:action="@{/signup}" method="post"><br/>
+            <button class="btn btn-warning btn-lg twitter-btn" name="Submit" value="Submit" type="Submit">Sign up</button>
+        </form>
+    </div>
+</body>
+</html>

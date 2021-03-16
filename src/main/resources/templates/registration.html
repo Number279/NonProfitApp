@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="fragments/fragments :: head"></head>
+<body>
+<!--<div th:replace="fragments/fragments :: navbar"></div>-->
+<main role="main">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Calendar Demo</h1>
+            <p>Calendar Demo Test</p>
+            <!--            <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn more &raquo;</a></p>-->
+        </div>
+    </div>
+    <div class="container">
+        <h2>Sign up</h2>
+        <form th:unless="${success}" th:action="@{/signup}" th:object="${user}" method="post" autocomplete="off" >
+            <div class="form-group">
+                <label th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="validation-message"></label>
+                <input type="text" th:field="*{username}" placeholder="username" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label th:if="${#fields.hasErrors('nonProfitName')}" th:errors="*{nonProfitName}" class="validation-message"></label>
+                <input type="text" th:field="*{nonProfitName}" placeholder="nonProfitName" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="validation-message"></label>
+                <input type="password" th:field="*{password}" placeholder="Password" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="validation-message"></label>
+                <input type="text" th:field="*{email}" placeholder="Email" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label th:if="${#fields.hasErrors('zipcode')}" th:errors="*{zipcode}" class="validation-message"></label>
+                <input type="text" th:field="*{zipcode}" placeholder="Zipcode" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label th:if="${#fields.hasErrors('address')}" th:errors="*{address}" class="validation-message"></label>
+                <input type="text" th:field="*{address}" placeholder="Address" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label th:if="${#fields.hasErrors('hours')}" th:errors="*{hours}" class="validation-message"></label>
+                <input type="text" th:field="*{hours}" placeholder="Hours of Operation" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label th:if="${#fields.hasErrors('needs')}" th:errors="*{needs}" class="validation-message"></label>
+                <input type="text" th:field="*{needs}" placeholder="Needs" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label th:if="${#fields.hasErrors('logo')}" th:errors="*{logo}" class="validation-message"></label>
+                <input type="text" th:field="*{logo}" placeholder="Enter logo url here" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label th:if="${#fields.hasErrors('city')}" th:errors="*{city}" class="validation-message"></label>
+                <input type="text" th:field="*{city}" placeholder="Enter City Here" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-md btn-success btn-block" name="Submit" value="Submit" type="Submit" th:text="Submit"></button>
+            </div>
+        </form>
+    </div>
+    <div th:if="${success}" class="container">
+        <div th:text="${success}"></div>
+        <form th:action="@{~/login}" method="get">
+            <button class="btn btn-md btn-primary twitter-btn m-3" type="Submit" >Log In</button>
+        </form>
+    </div>
+</body>
+</html>
