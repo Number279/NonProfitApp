@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:fragment="head">
-    <title>Non-Profit Admin Page</title>
+    <title>Find Help Here</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
@@ -28,23 +28,23 @@
 <body>
 <div th:fragment="navbar">
     <nav class="navbar navbar-expand-md navbar-default navbar-light bg-light">
-        <a class="navbar-brand" href="/">Help the Needy</a>
+        <a class="navbar-brand" href="/">Find Help Here</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
                 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">Find By Category</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01" >
-                        <a class="dropdown-item" href="/">All</a>
-                        <!--/*@thymesVar id="categories" type="java.util.List<com.example.demo.model.Category>"*/-->
-                        <a class="dropdown-item" th:each="category : ${categories}" th:text="${category}" th:href="@{/filter(category=${category})}"></a>
-                    </div>
-                </li>
+<!--        <div class="collapse navbar-collapse" id="navbarsExampleDefault">-->
+<!--            <ul class="navbar-nav mr-auto">-->
+<!--                <li class="nav-item dropdown">-->
+<!--                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"-->
+<!--                       aria-haspopup="true" aria-expanded="false">Find By Category</a>-->
+<!--                    <div class="dropdown-menu" aria-labelledby="dropdown01" >-->
+<!--                        <a class="dropdown-item" href="/">All</a>-->
+<!--                        &lt;!&ndash;/*@thymesVar id="categories" type="java.util.List<com.example.demo.model.Category>"*/&ndash;&gt;-->
+<!--                        <a class="dropdown-item" th:each="category : ${categories}" th:text="${category}" th:href="@{/filter(category=${category})}"></a>-->
+<!--                    </div>-->
+<!--                </li>-->
                 <!--                <li class="nav-item dropdown">-->
                 <!--                    <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown"-->
                 <!--                       aria-haspopup="true" aria-expanded="false">Find By Brand</a>-->

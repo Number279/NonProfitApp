@@ -28,6 +28,6 @@ public class MainController {
     @ModelAttribute("categories")
     public List<String> categories() {return productService.findDistinctCategories();}
 
-    @GetMapping("/help")
+    @GetMapping("/about")
     public String help() {return "about";}
 }

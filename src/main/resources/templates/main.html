@@ -2,20 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:replace="fragments/fragments :: head"></head>
 <body>
-<!--<div th:replace="fragments/fragments :: navbar"></div>-->
+<div th:replace="fragments/fragments :: navbar"></div>
 <main role="main">
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-3">Non Profit Demo</h1>
-            <p>Calendar Demo Test</p>
+            <h1 class="display-3">Find Help Here</h1>
+            <p>Connecting people in need with people who can help</p>
             <a href="/addProduct">Add Product</a>
             <br />
-            <a href="/admin">Admin Page</a>
+            <a href="/about">About Us</a>
             <!--            <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn more &raquo;</a></p>-->
         </div>
     </div>
-
+    <div class="navbar-light bg-light">
     <div class="container">
         <div class="row">
             <div class="card col-md-3 small-product-card" th:each="product:${products}">
@@ -30,6 +30,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </main>
 

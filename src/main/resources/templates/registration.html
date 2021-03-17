@@ -7,11 +7,12 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-3">Calendar Demo</h1>
-            <p>Calendar Demo Test</p>
+            <h1 class="display-3">Find Help Here</h1>
+            <p>Connecting people in need with people who can help</p>
             <!--            <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn more &raquo;</a></p>-->
         </div>
     </div>
+    <div class="navbar-light bg-light">
     <div class="container">
         <h2>Sign up</h2>
         <form th:unless="${success}" th:action="@{/signup}" th:object="${user}" method="post" autocomplete="off" >
@@ -68,5 +69,8 @@
             <button class="btn btn-md btn-primary twitter-btn m-3" type="Submit" >Log In</button>
         </form>
     </div>
+    <footer th:replace="fragments/fragments :: footer"></footer>
+    </div>
+</main>
 </body>
 </html>

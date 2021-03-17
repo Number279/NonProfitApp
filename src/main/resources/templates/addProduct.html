@@ -1,6 +1,21 @@
+
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="fragments/fragments :: head"></head>
 <body>
+<div th:replace="fragments/fragments :: navbar"></div>
+<main role="main">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Find Help Here</h1>
+            <p>Connecting people in need with people who can help</p>
+            <!--            <iframe src="URL" width="480" height="320" frameBorder="0"-->
+            <!--                    class="giphy-embed" allowFullScreen></iframe>-->
+        </div>
+    </div>
+
+    <div class="navbar-light bg-light">
 <form class="form" th:action="@{/product}" th:object="${product}" method="post">
     <h2 class="form-heading" style="text-align: center">Add a new Product</h2>
     <!--Name-->
@@ -52,5 +67,7 @@
         </button>
     </div>
 </form>
+    </div>
+</main>
 </body>
 </html>

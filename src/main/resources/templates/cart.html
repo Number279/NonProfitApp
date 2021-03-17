@@ -6,10 +6,11 @@
 <main role="main">
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-3">Non-Profit Demo</h1>
-            <h3 class="display-3">Non-Profit Haves</h3>
+            <h1 class="display-3">Find Help Here</h1>
+            <h3 class="display-3">Your Inventory</h3>
         </div>
     </div>
+    <div class="navbar-light bg-light">
     <div class="container">
         <div class="row">
             <div class="card col-md-3 small-product-card" th:each="product:${cart}">
@@ -63,6 +64,7 @@
 <!--    <div class="container">-->
 <!--        <a id="checkout-button"  class="btn" href="/checkout"><button class="btn btn-success">Checkout</button></a>-->
 <!--    </div>-->
+    </div>
 </main>
 <footer th:replace="fragments/fragments :: footer"></footer>
 </body>

@@ -6,11 +6,12 @@
 <main role="main">
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-3">Non-Profit Demo</h1>
+            <h1 class="display-3">Find Help Here</h1>
             <h3 class="display-3" th:text="${product.name}"></h3>
             <h3 class="display-3" th:text="${product.category}"></h3>
         </div>
     </div>
+    <div class="navbar-light bg-light">
     <div class="container">
         <div class="card mb-3 large-product-card">
             <div class="row no-gutters">
@@ -39,6 +40,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </main>
 <footer th:replace="fragments/fragments :: footer"></footer>
