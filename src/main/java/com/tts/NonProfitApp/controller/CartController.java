@@ -4,7 +4,6 @@ import com.tts.NonProfitApp.model.Product;
 import com.tts.NonProfitApp.model.User;
 import com.tts.NonProfitApp.service.ProductService;
 import com.tts.NonProfitApp.service.UserService;
-import com.tts.NonProfitApp.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +19,7 @@ public class CartController {
     ProductService productService;
 
     @Autowired
-    UserServiceImpl userService;
+    UserService userService;
 
     @ModelAttribute("loggedInUser")
     public User loggedInUser() {
@@ -43,7 +42,7 @@ public class CartController {
     public String showCart() {return "cart";}
 
     @PostMapping("/cart")
-    public String addToCart(@RequestParam Long id) {
+    public String addToCart(@RequestParam long id) {
         Product p = productService.findById(id);
         setQuantity(p, cart().getOrDefault(p, 0) + 1);
         return "cart";

@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends CrudRepository<User, Long> {
-    User findByNonProfitName(String nonProfitName);
+    User findByUsername(String username);
 
     List<User> findAllByZipcodeOrderByNonProfitNameDesc(int zipcode);
     List<User> findAllByCityOrderByNonProfitNameDesc(String city);

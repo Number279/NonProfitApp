@@ -35,6 +35,14 @@
         <input type="text" id="image" name="image" class="form-control" placeholder="Product Image URL"
                th:field="*{image}">
     </p>
+    <!--Quantity-->
+    <p>
+        <label for="quantity" class="sr-only">Quantity</label>
+        <label th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}"
+               class="validation-message"></label>
+        <input type="text" id="quantity" name="quantity" class="form-control" placeholder="Quantity"
+               th:field="*{quantity}">
+    </p>
 
 
     <div style="display: flex; justify-content: space-between">
