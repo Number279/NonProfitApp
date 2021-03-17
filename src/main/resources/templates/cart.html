@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="fragments/fragments :: head"></head>
+<body>
+<div th:replace="fragments/fragments :: navbar"></div>
+<main role="main">
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Non-Profit Demo</h1>
+            <h3 class="display-3">Non-Profit Haves</h3>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="card col-md-3 small-product-card" th:each="product:${cart}">
+                <!--        <li th:each="product:${cart}">-->
+                <!--                    <p>Product Id:</p>-->
+                <!--                    <p th:text="${product.key.id}"></p>-->
+                <h4>Name of Product:</h4>
+                <p th:text="${product.key.name}"></p>
+                <h4>Description of Product:</h4>
+                <p th:text="${product.key.description}"></p>
+                <h4>Number of items to add:</h4>
+                <p th:text="${product.value}"></p>
+                <img th:src="@{${product.key.image}}"/>
+                <br />
+                <form action="#" th:action="@{/cart/{id}(id=${product.key.id})}" th:method="post" >
+                    <input type="hidden" name="_method" value="post" />
+                    <button type="submit" id="submitButton"  class="btn btn-warning">Remove from Cart </button>
+                </form>
+
+
+                <!--                                        <form th:action="@{/cart/{id}(id=${product.key.id})}" th:object="${product}" th:method="delete">-->
+                <!--                        <input type="hidden" th:field="*{product.key.id}"/>-->
+                <!--                        <a th:href="@{/cart/{id}(id=${product.key.id})}" th:object="${product}" th:method="delete">Remove from Cart</a>-->
+                <!--                    </form>-->
+                <!--                    <a th:href="@{/product/{id}(id=${product.key.id})}"><button class="btn btn-warning">Remove From Cart</button></a>-->
+                <!--                    <form th:action="@{/cart/remove}" th:object="${product}" method="post">-->
+                <!--                        <input type="hidden" th:field="*{id}"/>-->
+                <!--                        <button type="submit" class="btn btn-primary">Remove From Cart</button>-->
+                <!--                    </form>-->
+                <!--                    <td>-->
+                <!--                        <a th:href="@{'/cart/doDelete/' + ${product.key.id}}">-->
+                <!--                            <span>Delete</span>-->
+                <!--                        </a>-->
+                <!--                    </td>-->
+                <!--                    <form class="form-cart" th:method="delete">-->
+                <!--&lt;!&ndash;                    <input type="hidden" name="_method" value="delete" />&ndash;&gt;-->
+                <!--                    <button class="btn btn-lg btn-warning" th:text=${product.key.id} name="id" type="submit">Remove from Cart</button>-->
+                <!--                    </form>-->
+                <!--                    <form action="#" th:action="@{'/cart/delete/{id}'(id=${product.id})}" th:method="delete" >-->
+                <!--                        <button type="submit" class="btn">-->
+                <!--                            Delete-->
+                <!--                        </button>-->
+                <!--                    </form>-->
+            </div>
+        </div>
+
+    </div>
+    <!--        </li>-->
+    <!--    </ul>-->
+    <br />
+<!--    <div class="container">-->
+<!--        <a id="checkout-button"  class="btn" href="/checkout"><button class="btn btn-success">Checkout</button></a>-->
+<!--    </div>-->
+</main>
+<footer th:replace="fragments/fragments :: footer"></footer>
+</body>
+</html>

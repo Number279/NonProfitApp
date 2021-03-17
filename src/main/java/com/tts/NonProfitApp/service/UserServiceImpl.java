@@ -68,9 +68,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void updateHaves(Map<Product, Integer> haves){
+    public void updateCart(Map<Product, Integer> cart){
         User user = getLoggedInUser();
-        user.setHaves(haves);
+        user.setCart(cart);
         save(user);
     }
 

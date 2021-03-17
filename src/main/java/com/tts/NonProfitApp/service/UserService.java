@@ -16,7 +16,7 @@ public interface UserService {
     void save(User user);
     User saveNewUser(User user);
     User getLoggedInUser();
-    void updateHaves(Map<Product, Integer> haves);
+    void updateCart(Map<Product, Integer> cart);
     List<User> sortByCity(String city);
 
 }

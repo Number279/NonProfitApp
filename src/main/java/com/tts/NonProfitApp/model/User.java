@@ -61,5 +61,5 @@ public class User {
     private Set<Role> roles;
 
     @ElementCollection
-    private Map<Product, Integer> haves;
+    private Map<Product, Integer> cart;
 }
