@@ -8,6 +8,8 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -44,6 +46,20 @@ public class NonProfitController {
     @GetMapping("/all")
     public Iterable<User> findAll() { return userService.findAll();}
 
+//    @ApiResponses(value = {
+//            @ApiResponse(code=200, message="Successfully retrieved the Non-Profits for this city."),
+//            @ApiResponse(code = 401, message = "You are not authorized to view this menu item.")
+//    })
+//    @ApiOperation(value = "All non-profits for a given city.", response = User.class,
+//            responseContainer = "List")
+//    @GetMapping("/city")
+//    public List<User> sortByCity(@RequestParam(value = "city", required = false)String city){
+//        if(city!=null){
+//            return userService.sortByCity(city);
+//        }
+//        return userService.findAll();
+//    }
+
     @ApiResponses(value = {
             @ApiResponse(code=200, message="Successfully retrieved the Non-Profits for this city."),
             @ApiResponse(code = 401, message = "You are not authorized to view this menu item.")
@@ -51,10 +67,15 @@ public class NonProfitController {
     @ApiOperation(value = "All non-profits for a given city.", response = User.class,
             responseContainer = "List")
     @GetMapping("/city")
-    public List<User> sortByCity(@RequestParam(value = "city", required = false)String city){
+    public ResponseEntity<List<User>> sortByCity(@RequestParam(value = "city", required = false)String city){
+        HttpHeaders responseHeaders = new HttpHeaders();
+        responseHeaders.set("Sawyer's Header", "Access-Control-Allow-Origin: *");
+
         if(city!=null){
-            return userService.sortByCity(city);
+            return ResponseEntity.ok(userService.sortByCity(city));
+//                    .headers(responseHeaders)
+//                    .body("Response with header using ResponseEntity");
         }
-        return userService.findAll();
+        return ResponseEntity.ok(userService.findAll());
     }
 }
