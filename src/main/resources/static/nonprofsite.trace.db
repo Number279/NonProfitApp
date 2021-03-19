@@ -1,0 +1,30 @@
+2021-03-18 13:58:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'Open and Outreach Placement Programs is designed to serve clients with barriers to employment through work readiness training, ... (329)"; SQL statement:
+insert into product (category, description, image, name, quantity, id) values (?, ?, ?, ?, ?, ?) [22001-200]
+2021-03-18 14:03:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'Ex-Offender Placement is designed to serve clients, who have a criminal record, with work readiness training, self-directed job... (309)"; SQL statement:
+insert into product (category, description, image, name, quantity, id) values (?, ?, ?, ?, ?, ?) [22001-200]
+2021-03-18 14:45:33 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('The \u201cHouse\u201d accommodates up to 27 families (80-people). With the support of the Department of Housing an... (364)"; SQL statement:
+insert into product (category, description, image, name, quantity, id) values (?, ?, ?, ?, ?, ?) [22001-200]
+2021-03-18 14:56:12 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'Providence House employs case managers, a licensed clinical professional counselor, a full-time dietary team and a full-time te... (356)"; SQL statement:
+insert into product (category, description, image, name, quantity, id) values (?, ?, ?, ?, ?, ?) [22001-200]
+2021-03-18 15:04:54 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'Meals On Wheels is a service designed to help seniors maintain their independence as they face financial, physical, or emotiona... (433)"; SQL statement:
+insert into product (category, description, image, name, quantity, id) values (?, ?, ?, ?, ?, ?) [22001-200]
+2021-03-18 15:08:55 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'Seniors 60 years of age and older, along with their spouses can enjoy a fun time of fellowship and games as well as a hot lunch... (278)"; SQL statement:
+insert into product (category, description, image, name, quantity, id) values (?, ?, ?, ?, ?, ?) [22001-200]
+2021-03-18 23:47:01 jdbc[203]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'The Street Outreach Team is visiting homeless camps, abandoned buildings, and anywhere else people are living that is not meant... (338)"; SQL statement:
+insert into product (category, description, image, name, quantity, id) values (?, ?, ?, ?, ?, ?) [22001-200]
+2021-03-18 23:52:32 jdbc[203]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('The Mission provides a full-scale Life Recovery Program that not only meets a person\u2019s basic needs but also p... (653)"; SQL statement:
+insert into product (category, description, image, name, quantity, id) values (?, ?, ?, ?, ?, ?) [22001-200]
+2021-03-19 00:11:38 jdbc[207]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'A delicious meal prepared in the Highland Center kitchen by Lashon and Yolanda , served family-style on round tables. Volunteer... (271)"; SQL statement:
+insert into product (category, description, image, name, quantity, id) values (?, ?, ?, ?, ?, ?) [22001-200]
+2021-03-19 00:28:56 jdbc[213]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'The Lovewell Center is a membership based resource center that gives members the opportunity to earn the physical resources the... (302)"; SQL statement:
+insert into product (category, description, image, name, quantity, id) values (?, ?, ?, ?, ?, ?) [22001-200]
