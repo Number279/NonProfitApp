@@ -1,6 +1,9 @@
-package com.tts.NonProfitApp.controller;
-
-public class MapController {
-    @GetMapping ("/home")
-    public String getDefaultMap()
-}
+//package com.tts.NonProfitApp.controller;
+//
+//import org.springframework.stereotype.Controller;
+//
+//@Controller
+//public class MapController {
+//    @GetMapping ("/home")
+//    public String getDefaultMap();
+//}
