@@ -52,6 +52,7 @@ public class User {
     private String needs;
     private String logo;
     private String city;
+    private String url;
 
     @CreationTimestamp
     private Date createdAt;

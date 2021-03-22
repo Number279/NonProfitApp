@@ -62,6 +62,10 @@
                 <input type="text" th:field="*{city}" placeholder="Enter City Here" class="form-control"/>
             </div>
             <div class="form-group">
+                <label th:if="${#fields.hasErrors('url')}" th:errors="*{url}" class="validation-message"></label>
+                <input type="text" th:field="*{url}" placeholder="Enter website address here" class="form-control"/>
+            </div>
+            <div class="form-group">
                 <button class="btn btn-md btn-success btn-block" name="Submit" value="Submit" type="Submit" th:text="Submit"></button>
             </div>
         </form>
